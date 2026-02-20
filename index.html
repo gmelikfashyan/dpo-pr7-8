@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Полка — книжный интернет-магазин. Бестселлеры, классика, новинки и специальная литература.">
+  <title>Полка — Книжный магазин</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Кастомные стили -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="Begin">
+
+
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0" aria-label="Основная навигация">
+
+        <!-- Логотип -->
+        <a class="navbar-brand p-0 me-4" href="index.html">
+          <img src="assets/android-chrome-512x512.png"
+               alt="Полка — Книжный магазин"
+               class="navbar-brand-logo">
+        </a>
+
+        <!-- Кнопка-гамбургер -->
+        <button class="navbar-toggler border-0 text-white" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav"
+                aria-controls="mainNav"
+                aria-expanded="false"
+                aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Меню -->
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="katalog.html">Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutUs.html">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Галерея</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="trash.html">Корзина</a>
+            </li>
+          </ul>
+
+          <a href="registration.html" class="btn-login text-decoration-none">Вход</a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero-section" aria-label="Приветственный блок">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+
+          <div class="col-lg-5 col-md-6 text-center">
+            <img src="assets/pushkin.png"
+                 alt="Иллюстрация — персонаж у полки с книгами"
+                 class="hero-image">
+          </div>
+
+          <div class="col-lg-7 col-md-6">
+            <p class="text-muted small mb-1">Книжный магазин</p>
+            <h1 class="hero-title">Полка —<br><span>проводник в мир литературы</span></h1>
+            <p class="hero-subtitle">
+              Бестселлеры и специальная литература, самые свежие новинки и нестареющая классика.
+              В нашем интернет-магазине вы найдёте всё, что можно прочитать.
+            </p>
+            <a href="katalog.html" class="btn-catalog">Каталог</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="quotes-section" aria-labelledby="quotes-heading">
+      <div class="container">
+        <h2 class="section-title" id="quotes-heading">Лучшие цитаты</h2>
+
+        <div class="row g-4">
+
+          <div class="col-md-4">
+            <article class="quote-card">
+              <div class="d-flex gap-3">
+                <img src="assets/idiot.jpg"
+                     alt="Обложка книги «Идиот»"
+                     class="book-cover">
+                <div>
+                  <p class="book-name">Идиот</p>
+                  <p class="quote-text">
+                    «Сострадание есть главнейший и, может быть, единственный закон бытия всего человечества»
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="quote-card">
+              <div class="d-flex gap-3">
+                <img src="assets/oblomov.jpg"
+                     alt="Обложка книги «Обломов»"
+                     class="book-cover">
+                <div>
+                  <p class="book-name">Обломов</p>
+                  <p class="quote-text">
+                    «Да разве после одного счастья бывает другое, потом третье, такое же?»
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="quote-card">
+              <div class="d-flex gap-3">
+                <img src="assets/detstvo.jpg"
+                     alt="Обложка книги «Детство»"
+                     class="book-cover">
+                <div>
+                  <p class="book-name">Детство</p>
+                  <p class="quote-text">
+                    «Если улыбка прибавляет прелести лицу, то лицо прекрасно; если она не изменяет его, то оно обыкновенно; если она портит его, то оно дурно»
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sales-section" aria-labelledby="sales-heading">
+      <div class="container">
+
+        <div class="d-flex align-items-center gap-3 mb-2">
+          <img src="assets/sales.png"
+               alt="" aria-hidden="true"
+               class="sales-banner-img">
+          <div>
+            <h2 class="section-title mb-0" id="sales-heading">Акции</h2>
+            <p class="sales-intro mb-0">Наши специальные предложения сделают мир литературы доступнее</p>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-1">
+
+          <div class="col-sm-6 col-xl-3">
+            <div class="sale-card">
+              <div class="sale-covers">
+                <img src="assets/metro.jpeg" alt="Метро 2033">
+                <img src="assets/robot.jpeg" alt="Книга о роботах">
+              </div>
+              <div class="sale-body">
+                <h6>Скидка 25% на всю фантастику</h6>
+                <a href="katalog.html" class="btn-to-catalog">Каталог</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <div class="sale-card">
+              <div class="sale-covers">
+                <img src="assets/kavkaz.jpg" alt="Кавказ">
+                <img src="assets/karenina.jpg" alt="Анна Каренина">
+              </div>
+              <div class="sale-body">
+                <h6>Русская литература</h6>
+                <a href="katalog.html" class="btn-to-catalog">Каталог</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <div class="sale-card">
+              <div class="sale-covers">
+                <img src="assets/bytsoboy.jpeg" alt="Быть собой">
+                <img src="assets/ti+mozhesh.jpeg" alt="Ты можешь">
+              </div>
+              <div class="sale-body">
+                <h6>Психология 2=1</h6>
+                <a href="katalog.html" class="btn-to-catalog">Каталог</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <div class="sale-card">
+              <div class="sale-covers">
+                <img src="assets/ii.jpg" alt="Искусственный интеллект">
+                <img src="assets/shwab.jpg" alt="Книга Шваба">
+              </div>
+              <div class="sale-body">
+                <h6>Доступная экономика</h6>
+                <a href="katalog.html" class="btn-to-catalog">Каталог</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="classics-section" aria-labelledby="classics-heading">
+      <div class="container">
+
+        <div class="classics-banner">
+          <img src="assets/lerm.png" alt="" aria-hidden="true">
+          <p>Не читали Пушкина и Толстого со школьных времён? Самое время это исправить.</p>
+        </div>
+
+        <h2 class="section-title" id="classics-heading">Русская классика</h2>
+
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4">
+
+          <div class="col">
+            <div class="book-card">
+              <div class="book-card-cover-wrap">
+                <img src="assets/geroy-nashego-vremeni.jpg" alt="Герой нашего времени — обложка">
+              </div>
+              <p class="book-author">Михаил Лермонтов</p>
+              <p class="book-title">Герой нашего времени</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="book-card">
+              <div class="book-card-cover-wrap">
+                <img src="assets/prestuplenie.jpg" alt="Преступление и наказание — обложка">
+              </div>
+              <p class="book-author">Фёдор Достоевский</p>
+              <p class="book-title">Преступление и наказание</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="book-card">
+              <div class="book-card-cover-wrap">
+                <img src="assets/kapitanskaya.jpg" alt="Капитанская дочка — обложка">
+              </div>
+              <p class="book-author">Александр Пушкин</p>
+              <p class="book-title">Капитанская дочка</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="book-card">
+              <div class="book-card-cover-wrap">
+                <img src="assets/mciri.jpg" alt="Мцыри — обложка">
+              </div>
+              <p class="book-author">Михаил Лермонтов</p>
+              <p class="book-title">Мцыри</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="book-card">
+              <div class="book-card-cover-wrap">
+                <img src="assets/anna.jpeg" alt="Анна Каренина — обложка">
+              </div>
+              <p class="book-author">Лев Толстой</p>
+              <p class="book-title">Анна Каренина</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="book-card">
+              <div class="book-card-cover-wrap">
+                <img src="assets/taras.jpg" alt="Тарас Бульба — обложка">
+              </div>
+              <p class="book-author">Николай Гоголь</p>
+              <p class="book-title">Тарас Бульба</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="book-card">
+              <div class="book-card-cover-wrap">
+                <img src="assets/bednaya.jpg" alt="Бедная Лиза — обложка">
+              </div>
+              <p class="book-author">Николай Карамзин</p>
+              <p class="book-title">Бедная Лиза</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="book-card">
+              <div class="book-card-cover-wrap">
+                <img src="assets/belie.jpg" alt="Белые ночи — обложка">
+              </div>
+              <p class="book-author">Фёдор Достоевский</p>
+              <p class="book-title">Белые ночи</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="glossary-section" aria-labelledby="glossary-heading">
+      <div class="container">
+        <h2 class="section-title" id="glossary-heading">Будь подкован! Учи литературный сленг с нами</h2>
+
+        <div class="row">
+          <div class="col-lg-8">
+            <dl class="glossary">
+
+              <dt>Акмеизм</dt>
+              <dd>
+                Литературное течение, противостоящее символизму и возникшее в начале XX века в России.
+                Акмеисты провозглашали материальность, точность слова.
+                <em>(от греч. ἀκμή — вершина)</em>
+              </dd>
+
+              <dt>Драма</dt>
+              <dd>1. Один из трёх родов литературы, определяющий произведения, предназначенные для сценического воплощения.</dd>
+              <dd>2. Драматическое произведение, не имеющее чётких жанровых признаков, соединяющее в себе приёмы разных жанров.</dd>
+
+              <dt>Литота</dt>
+              <dd>1. Приём преуменьшения явления или деталей его — обратная гипербола.</dd>
+              <dd>2. Приём характеристики явления не прямым определением, а отрицанием противоположного определения.</dd>
+
+              <dt>Неологизмы</dt>
+              <dd>Новообразованные слова или выражения.</dd>
+
+              <dt>Очерк</dt>
+              <dd>Литературное произведение, основанное на фактах, документах, наблюдениях автора.</dd>
+
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 class="section-title" id="contact-heading">Свяжитесь с нами для заказа</h2>
+
+        <ul class="contact-list">
+          <li>
+            <a href="tel:01234567890">
+              <img src="assets/telephone-handle-silhouette.png" alt="">
+              Свяжитесь с оператором по телефону
+            </a>
+          </li>
+          <li>
+            <a href="/cdn-cgi/l/email-protection#2d5e48434948404c44416d404c4441035f58125e584f47484e5910fdb0fd93fd9ffca6fd940dfd9afd9dfd97fd9dfd9a0b4f42495410fdbafd99fcadfd9dfd9ffcacfcaffd9ffcaefd94fcaffd98010dfca20dfca8fd93fcaafcae0dfcacfd99fd98fd96fd9dfcaffca10dfd9afd9dfd97fd9dfd9a0dfd9f0dfd9ffd9dfca5fd98fd910dfd91fd9dfd9efd9dfd9afd95fd90fd9803">
+              <img src="assets/envelope.png" alt="">
+              Отправьте письмо о заказе на почту
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer" aria-label="Подвал сайта">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- О нас -->
+        <div class="col-lg-4 col-md-6">
+          <h5>О нас</h5>
+          <p>
+            Полка — это лучший книжный магазин, где вы точно найдёте интересующую Вас книгу
+            и получите только положительные эмоции от обслуживания. Главная цель нашей команды —
+            быть проводником в мир литературы для всех желающих.
+          </p>
+          <nav class="footer-social-icons" aria-label="Социальные сети">
+            <a href="#" aria-label="Telegram">
+              <img src="assets/free-icon-telegram-2111708.png" alt="Telegram">
+            </a>
+            <a href="#" aria-label="ВКонтакте">
+              <img src="assets/free-icon-vk-733639.png" alt="ВКонтакте">
+            </a>
+            <a href="#" aria-label="YouTube">
+              <img src="assets/free-icon-youtube-2111795.png" alt="YouTube">
+            </a>
+          </nav>
+        </div>
+
+        <!-- Моя Полка -->
+        <div class="col-lg-2 col-sm-4 col-6">
+          <h5>Моя Полка</h5>
+          <ul>
+            <li><a href="registration.html">Вход</a></li>
+            <li><a href="aboutUs.html">О нас</a></li>
+            <li><a href="aboutUs.html">Помощь</a></li>
+          </ul>
+        </div>
+
+        <!-- Важное -->
+        <div class="col-lg-2 col-sm-4 col-6">
+          <h5>Важное</h5>
+          <ul>
+            <li><a href="katalog.html">Каталог</a></li>
+            <li><a href="katalog.html">Акции</a></li>
+            <li><a href="registration.html">Личный кабинет</a></li>
+          </ul>
+        </div>
+
+        <!-- Контакты -->
+        <div class="col-lg-4 col-sm-4">
+          <h5>Связаться с нами</h5>
+          <div class="footer-contact-item">
+            <img src="assets/telephone-handle-silhouette.png" alt="">
+            <a href="tel:01234567890">+7 (918) 777-77-77</a>
+          </div>
+          <div class="footer-contact-item">
+            <img src="assets/envelope.png" alt="">
+            <a href="/cdn-cgi/l/email-protection#a6d5c3c8c2c3cbc7cfcae6cbc7cfca88d4d399d5d3c4ccc3c5d29b763b76187614772d761f8676117616761c7616761180c4c9c2df9b763176127726761676147727772476147725761f772476138a86772986772376187721772586772776127613761d76167724772a8676117616761c761676118676148676147616772e7613761a86761a7616761576167611761e761b761388"><span class="__cf_email__" data-cfemail="2b7b4447404a6b464a424705595e">[email&#160;protected]</span></a>
+          </div>
+          <p class="mt-2 mb-0" style="font-size: 12px; color: #6b6360;">Меликфашян Г.А, ИКБО-20-22</p>
+        </div>
+
+      </div>
+
+      <hr class="footer-divider">
+
+      <p class="footer-copy text-center mb-0">© 2023 Полка. Книжный магазин</p>
+    </div>
+  </footer>
+
+  <a href="#Begin" class="back-to-top" id="backToTop" aria-label="Вернуться наверх">
+    <img src="assets/up.png" alt="">
+  </a>
+
+ 
