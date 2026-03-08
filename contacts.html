@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Полка — контакты и форма обратной связи">
+  <title>Контакты — Полка</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="Begin">
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0" aria-label="Основная навигация">
+
+        <a class="navbar-brand p-0 me-4" href="index.html">
+          <img src="assets/android-chrome-512x512.png"
+               alt="Полка — Книжный магазин"
+               class="navbar-brand-logo">
+        </a>
+
+        <button class="navbar-toggler border-0 text-white" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav"
+                aria-controls="mainNav"
+                aria-expanded="false"
+                aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="katalog.html">Каталог</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contacts.html">Контакты</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="trash.html">Корзина</a></li>
+          </ul>
+          <a href="registration.html" class="btn-login text-decoration-none">Вход</a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero-section py-4" aria-label="Заголовок страницы">
+      <div class="container">
+        <h1 class="hero-title mb-1">Контакты</h1>
+        <p class="hero-subtitle mb-0">Свяжитесь с нами или оставьте отзыв — мы всегда рады помочь</p>
+      </div>
+    </section>
+
+    <section class="contacts-section" aria-labelledby="contacts-heading">
+      <div class="container">
+        <div class="row g-5">
+
+          <div class="col-lg-7">
+            <h2 class="section-title" id="contacts-heading">Форма обратной связи</h2>
+
+            <form id="feedbackForm" novalidate>
+
+              <div class="mb-3">
+                <label for="fullname" class="form-label">
+                  ФИО <span class="text-danger">*</span>
+                </label>
+                <input type="text"
+                       class="form-control"
+                       id="fullname"
+                       placeholder="Иванов Иван Иванович"
+                       autocomplete="name">
+                <span class="field-error" id="fullname-error"></span>
+              </div>
+
+              <div class="mb-3">
+                <label for="phone" class="form-label">
+                  Телефон <span class="text-danger">*</span>
+                </label>
+                <input type="tel"
+                       class="form-control"
+                       id="phone"
+                       placeholder="+7 (___) ___-__-__"
+                       autocomplete="tel">
+                <span class="field-error" id="phone-error"></span>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">
+                  Email <span class="text-danger">*</span>
+                </label>
+                <input type="email"
+                       class="form-control"
+                       id="email"
+                       placeholder="example@mail.ru"
+                       autocomplete="email">
+                <span class="field-error" id="email-error"></span>
+              </div>
+
+              <div class="mb-3">
+                <label for="subject" class="form-label">Тема обращения</label>
+                <select class="form-select" id="subject">
+                  <option value="" disabled selected>Выберите тему</option>
+                  <option value="order">Вопрос по заказу</option>
+                  <option value="suggestion">Предложение</option>
+                  <option value="complaint">Жалоба</option>
+                  <option value="thanks">Благодарность</option>
+                  <option value="other">Другое</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">Сообщение</label>
+                <textarea class="form-control"
+                          id="message"
+                          rows="4"
+                          placeholder="Текст сообщения..."></textarea>
+                <span style="font-size:12px; color:var(--clr-muted);">До 500 символов</span>
+              </div>
+
+              <div class="mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="agreement">
+                  <label class="form-check-label" for="agreement" style="font-size:14px;">
+                    Я согласен на обработку персональных данных <span class="text-danger">*</span>
+                  </label>
+                  <span class="field-error" id="agreement-error"></span>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3 flex-wrap">
+                <button type="submit" class="btn-submit">Отправить</button>
+                <button type="reset" class="btn-reset-form">Очистить</button>
+              </div>
+
+              <div class="form-success" id="formSuccess">
+                ✅ Ваше сообщение отправлено! Мы свяжемся с вами в ближайшее время.
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Контактная информация -->
+          <div class="col-lg-5">
+            <div class="contact-info-card">
+              <h3>Наши контакты</h3>
+
+              <div class="contact-info-item">
+                <span>📞</span>
+                <div>
+                  <div class="ci-label">Телефон</div>
+                  <a href="tel:+79187777777">+7 (918) 777-77-77</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span>✉️</span>
+                <div>
+                  <div class="ci-label">Email</div>
+                  <a href="mailto:Polka@mail.ru">Polka@mail.ru</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span>📍</span>
+                <div>
+                  <div class="ci-label">Адрес</div>
+                  <span>Москва, ул. Книжная, 42</span>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span>🕐</span>
+                <div>
+                  <div class="ci-label">Режим работы</div>
+                  <span>Пн–Пт: 9:00 – 20:00<br>Сб–Вс: 10:00 – 18:00</span>
+                </div>
+              </div>
+
+              <hr style="border-color: var(--clr-border); margin: 20px 0;">
+
+              <p style="font-size:13px; color:var(--clr-muted); margin-bottom:12px;">Мы в социальных сетях:</p>
+              <nav class="footer-social-icons" aria-label="Социальные сети">
+                <a href="#" aria-label="Telegram">
+                  <img src="assets/free-icon-telegram-2111708.png" alt="Telegram">
+                </a>
+                <a href="#" aria-label="ВКонтакте">
+                  <img src="assets/free-icon-vk-733639.png" alt="ВКонтакте">
+                </a>
+                <a href="#" aria-label="YouTube">
+                  <img src="assets/free-icon-youtube-2111795.png" alt="YouTube">
+                </a>
+              </nav>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 class="section-title" id="faq-heading">Часто задаваемые вопросы</h2>
+
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#faq1"
+                          aria-expanded="true" aria-controls="faq1">
+                    Как оформить заказ?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Выберите книгу в каталоге и нажмите «В корзину». Затем перейдите в корзину,
+                    проверьте состав заказа и нажмите «Оформить». Укажите адрес доставки и
+                    способ оплаты — заказ будет принят в обработку в течение нескольких минут.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#faq2"
+                          aria-expanded="false" aria-controls="faq2">
+                    Какие способы доставки доступны?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Вы можете заказать доставку заказа курьером (до 3 дней), Почтой России или в пункт выдачи Яндекс.Маркета (3-14 дней).
+                    Бесплатная доставка при заказе от 2000 рублей.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#faq3"
+                          aria-expanded="false" aria-controls="faq3">
+                    Можно ли вернуть книгу?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Да, возврат возможен. Для оформления возврата
+                    свяжитесь с нами по телефону или электронной почте. 
+                    Обращаем ваге внимание на то, что обратиться нужно в течение 14 дней с момента получения, если книга
+                    не была в употреблении и сохранила товарный вид.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#faq4"
+                          aria-expanded="false" aria-controls="faq4">
+                    Как отследить статус заказа?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Обо всех изменениях в статусе Вашего заказа мы уведовим вас по электронной почте, оставденной в форме заказа
+                    или указанной в личном кабинете.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#faq5"
+                          aria-expanded="false" aria-controls="faq5">
+                    Есть ли скидки для первого заказа?
+                  </button>
+                </h3>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Да! Скидка для первого заказа составляет 10%. Данная скидка суммируется с остальными бонусами на товар.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" aria-label="Подвал сайта">
+    <div class="container">
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6">
+          <h5>О нас</h5>
+          <p>Полка — это лучший книжный магазин, где вы точно найдёте интересующую Вас книгу и получите только положительные эмоции от обслуживания.</p>
+          <nav class="footer-social-icons" aria-label="Социальные сети">
+            <a href="#" aria-label="Telegram"><img src="assets/free-icon-telegram-2111708.png" alt="Telegram"></a>
+            <a href="#" aria-label="ВКонтакте"><img src="assets/free-icon-vk-733639.png" alt="ВКонтакте"></a>
+            <a href="#" aria-label="YouTube"><img src="assets/free-icon-youtube-2111795.png" alt="YouTube"></a>
+          </nav>
+        </div>
+
+        <div class="col-lg-2 col-sm-4 col-6">
+          <h5>Моя Полка</h5>
+          <ul>
+            <li><a href="registration.html">Вход</a></li>
+            <li><a href="contacts.html">О нас</a></li>
+            <li><a href="contacts.html">Помощь</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-sm-4 col-6">
+          <h5>Важное</h5>
+          <ul>
+            <li><a href="katalog.html">Каталог</a></li>
+            <li><a href="katalog.html">Акции</a></li>
+            <li><a href="registration.html">Личный кабинет</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-sm-4">
+          <h5>Связаться с нами</h5>
+          <div class="footer-contact-item">
+            <img src="assets/telephone-handle-silhouette.png" alt="">
+            <a href="tel:+79187777777">+7 (918) 777-77-77</a>
+          </div>
+          <div class="footer-contact-item">
+            <img src="assets/envelope.png" alt="">
+            <a href="mailto:Polka@mail.ru">Polka@mail.ru</a>
+          </div>
+          <p class="mt-2 mb-0" style="font-size: 12px; color: #6b6360;">Меликфашян Г.А, ИКБО-20-22</p>
+        </div>
+
+      </div>
+      <hr class="footer-divider">
+      <p class="footer-copy text-center mb-0">© 2023 Полка. Книжный магазин</p>
+    </div>
+  </footer>
+
+  <a href="#Begin" class="back-to-top" id="backToTop" aria-label="Вернуться наверх">
+    <img src="assets/up.png" alt="">
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/validation.js"></script>
+  <script src="scripts/consoleLogger.js"></script>
+
+  <script>
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTopBtn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
